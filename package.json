@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css": "tailwindcss build assets/src_css/style.css -o assets/css/style.css"
+    "watch": "postcss assets/src_css/style.css -o assets/css/style.css --watch",
+    "build": "NODE_ENV=production postcss assets/src_css/style.css -o assets/css/style.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.13",
     "tailwindcss": "^2.1.2"
   }
 }
